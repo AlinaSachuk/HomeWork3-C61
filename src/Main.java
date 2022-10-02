@@ -91,9 +91,22 @@ public class Main {
             System.out.println(Math.pow(i, 2));
         }
         Scanner scanner = new Scanner(System.in);
-        int summ = scanner.nextInt();
-        int k = 0;
-        int m = k + summ;
-            System.out.println(m + summ);
+        System.out.println("ввведите целое положительное число");
+        if (scanner.hasNextInt()) {
+            int somenumber = scanner.nextInt();
+            if (somenumber <= 0) {
+                System.out.println("Вы ввели 0 или отрицательное число. Перезапустите программу и введите новое число");
+                scanner.close();
+            }
+            int summ = 0;
+            for (int i = 1; i < somenumber; i++) {
+                summ += i;
+            }
+            System.out.println(summ);
+            scanner.close();
+        } else {
+            System.out.println("Вы ввели не число. Перезапустите программу и введите новое число");
+            scanner.close();
+        }
     }
 }
