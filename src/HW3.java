@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HW3 {
@@ -29,13 +30,8 @@ public class HW3 {
         }
             System.out.println(max);
         System.out.println("Задание 2 - минимальный элемент массива");
-        double min = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < min) {
-                min = array[i];
-                System.out.println(min);
-            }
-        }
+        Arrays.sort(array);
+                System.out.println(array[0]);
         System.out.println("Задание 3");
 
         System.out.println("Задание 4");
