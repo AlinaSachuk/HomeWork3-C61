@@ -28,15 +28,41 @@ public class HW3 {
                 max = array[i];
             }
         }
-            System.out.println(max);
+        System.out.println(max);
         System.out.println("Задание 2 - минимальный элемент массива");
-        Arrays.sort(array);
-                System.out.println(array[0]);
-        System.out.println("Задание 3");
-
+        double min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            double value = array[i];
+            if (min > value) {
+                min = value;
+            }
+        }
+        System.out.println(min);
+        System.out.println("Задание 3 - индекс максимального элемента массива");
+        int indexMax = 0;
+        double maximum = array[0];
+        for (int i = 0; i < array.length; i++) {
+            double score = array[i];
+            if (maximum < score) {
+                maximum = score;
+                indexMax = i;
+            }
+        }
+        System.out.println(indexMax);
+        System.out.println("Задание 3 - индекс минимального элемента массива");
+        int indexMin = 0;
+        double minimum = array[0];
+        for (int i = 0; i < array.length; i++) {
+            double score = array[i];
+            if (minimum > score) {
+                minimum = score;
+                indexMin = i;
+            }
+        }
+        System.out.println(indexMin);
         System.out.println("Задание 4");
         for (int i = 0; i < array.length; i++) {
-            if (array [i] == 0) {
+            if (array[i] == 0) {
                 System.out.println(array[i]);
             } else {
                 System.out.println("нулевых элементов в массиве нет");
@@ -45,6 +71,17 @@ public class HW3 {
         }
         System.out.println("Задание 5");
         System.out.println("Задание 6");
+        boolean sequence = true;
+        for (int i = 0; i < array.length-1; i++) {
+            if (array[i] < array[i + 1]) {
+                sequence = true;
+            }
+        }
+        if (sequence) {
+            System.out.println("Массив является возрастающей последовательностью");
+        } else {
+            System.out.println("Массив НЕ является возрастающей последовательностью");
+        }
     }
 }
 
