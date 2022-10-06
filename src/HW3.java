@@ -69,18 +69,25 @@ public class HW3 {
                 break;
             }
         }
-        System.out.println("Задание 5");
         System.out.println("Задание 6");
         boolean sequence = true;
-        for (int i = 0; i < array.length-1; i++) {
-            if (array[i] < array[i + 1]) {
-                sequence = true;
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                sequence = false;
             }
         }
-        if (sequence) {
-            System.out.println("Массив является возрастающей последовательностью");
-        } else {
-            System.out.println("Массив НЕ является возрастающей последовательностью");
+        System.out.println("Массив является возрастающей последовательностью?" + " " + sequence);
+        System.out.println("массив должен быть заполнен пользователем вручную");
+        for (int i = 0; i < someValue; i++){
+            array [i] = scanner.nextInt();
+            System.out.println(array[i]);
+        }
+        System.out.println("Задание 5 - поменять местами 1 и последний элементы массива, второй и предпоследний элементы массива");
+        for (int i = 0, j = array.length - 1; i < array.length/2 & j/2 >= 0; i++, j--) {
+            double x = array[i];
+            array[i] = array[j];
+            array[j] = x;
+            System.out.println(array);
         }
     }
 }
