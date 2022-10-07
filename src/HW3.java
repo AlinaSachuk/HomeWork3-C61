@@ -77,17 +77,22 @@ public class HW3 {
             }
         }
         System.out.println("Массив является возрастающей последовательностью?" + " " + sequence);
-        System.out.println("массив должен быть заполнен пользователем вручную");
-        for (int i = 0; i < someValue; i++){
-            array [i] = scanner.nextInt();
-            System.out.println(array[i]);
-        }
         System.out.println("Задание 5 - поменять местами 1 и последний элементы массива, второй и предпоследний элементы массива");
-        for (int i = 0, j = array.length - 1; i < array.length/2 & j/2 >= 0; i++, j--) {
+        for (int i = 0, j = array.length - 1; i < array.length / 2 & j / 2 >= 0; i++, j--) {
             double x = array[i];
             array[i] = array[j];
             array[j] = x;
-            System.out.println(array);
+            System.out.println(Arrays.toString(array));
+        }
+        System.out.println("ввведите размер массива в виде числа");
+        int someNumber = scanner.nextInt();
+        int[] array2 = new int[someNumber];
+        System.out.println("массив должен быть заполнен пользователем вручную");
+        for (int i = 0; i < someNumber; i++) {
+            int temp = i + 1;
+            System.out.println("введите элемент массива №" + temp);
+            array2[i] = scanner.nextInt();
+            System.out.println(array2[i]);
         }
     }
 }
