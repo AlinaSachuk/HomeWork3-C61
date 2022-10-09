@@ -15,5 +15,20 @@ public class HW5 {
             }
         }
         System.out.println("Новая сумма элементов массива:" + summ);
+        System.out.println();
+        String[][] chess = new String[8][8];
+        for (int i = 0; i < chess.length; i++) {
+            for (int j = 0; j < chess[i].length; j++) {
+                if (i % 2 == 0 & j % 2 == 0) {
+                    chess[i][j] = "W";
+                } else if (i % 2 != 0 & j % 2 != 0) {
+                    chess[i][j] = "W";
+                } else {
+                    chess[i][j] = "B";
+                }
+                System.out.print(chess[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
