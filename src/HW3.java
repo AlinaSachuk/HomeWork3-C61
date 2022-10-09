@@ -78,12 +78,12 @@ public class HW3 {
         }
         System.out.println("Массив является возрастающей последовательностью?" + " " + sequence);
         System.out.println("Задание 5 - поменять местами 1 и последний элементы массива, второй и предпоследний элементы массива");
-        for (int i = 0, j = array.length - 1; i < array.length / 2 & j / 2 >= 0; i++, j--) {
+        for (int i = 0; i < array.length / 2; i++) {
             double x = array[i];
-            array[i] = array[j];
-            array[j] = x;
-            System.out.println(Arrays.toString(array));
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = x;
         }
+        System.out.println(Arrays.toString(array));
         System.out.println("ввведите размер массива в виде числа");
         int someNumber = scanner.nextInt();
         int[] array2 = new int[someNumber];
