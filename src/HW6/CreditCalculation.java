@@ -18,7 +18,7 @@ public class CreditCalculation {
         CreditCard card3 = new CreditCard(34523452, 984.2);
         card3.getCreditCardInfo();
         card3.getMoney(456);
-        System.out.print("Информация по карте №2 после снятия: ");
+        System.out.print("Информация по карте №3 после снятия: ");
         card3.getCreditCardInfo();
     }
 }
