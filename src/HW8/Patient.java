@@ -8,12 +8,12 @@ public class Patient {
     Therapist therapist = new Therapist();
     Surgeon surgeon = new Surgeon();
     Dentist dentist = new Dentist();
+
     public int treatmentPlan(int number) {
         this.treatment1 = treatment1;
         this.treatment2 = treatment2;
         this.treatment3 = treatment3;
         this.treatment4 = treatment4;
-
         if (number == 1) {
             surgeon.treat();
             System.out.println("Ваш план лечения:" + treatment1);
