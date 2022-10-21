@@ -7,12 +7,16 @@ public class dopHW9 {
         int[] array = {2, 4, 6, 8};
         System.out.println("Input: " + Arrays.toString(array));
         String line = "";
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             line += array[i];
         }
         Integer number = Integer.parseInt(line);
         int newNumber = number + 1;
         String newLine = String.valueOf(newNumber);
-        System.out.println("Output: " + newLine);
+        int[] newArray = new int[newLine.length()];
+        for (int i = 0; i < newLine.length(); i++) {
+            newArray[i] = Integer.parseInt(String.valueOf(newLine.charAt(i)));
+        }
+        System.out.println("Output: " + Arrays.toString(newArray));
     }
 }
