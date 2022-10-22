@@ -9,7 +9,7 @@ public class UkrainianHen extends Hen {
         return numberOfUkrainianEggsPerMonth;
     }
     public UkrainianHen() {
-        countOfUkrainianEggs += getCountOfEggsPerMonth();
+        countOfUkrainianEggs += getCountOfEggsPerMonth()*12;
     }
     @Override
     public String getDescription() {

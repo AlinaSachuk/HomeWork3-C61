@@ -8,9 +8,11 @@ public class MoldovanHen extends Hen {
     public int getCountOfEggsPerMonth() {
         return numberOfMoldovanEggsPerMonth;
     }
+
     public MoldovanHen() {
-        countOfMoldovanEggs += getCountOfEggsPerMonth();
+        countOfMoldovanEggs += getCountOfEggsPerMonth() * 12;
     }
+
     @Override
     public String getDescription() {
         return super.getDescription() + "Моя страна - Молдова. Я несу " + numberOfMoldovanEggsPerMonth + " яиц в месяц.";

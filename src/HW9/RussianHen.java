@@ -1,7 +1,5 @@
 package HW9;
 
-import java.util.SortedMap;
-
 public class RussianHen extends Hen {
     private int numberOfRussianEggsPerMonth = 30;
     static int countOfRussianEggs = 0;
@@ -11,9 +9,11 @@ public class RussianHen extends Hen {
         return numberOfRussianEggsPerMonth;
     }
 
-    public RussianHen() {
-        countOfRussianEggs += getCountOfEggsPerMonth();
+
+    public RussianHen () {
+        countOfRussianEggs += getCountOfEggsPerMonth()*12;
     }
+
     @Override
     public String getDescription() {
         return super.getDescription() + "Моя страна - Россия. Я несу " + numberOfRussianEggsPerMonth + " яиц в месяц.";
