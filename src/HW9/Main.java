@@ -2,27 +2,18 @@ package HW9;
 
 public class Main {
     public static void main(String[] args) {
+        int totalEggs = 0;
         for (int i = 0; i < 25; i++) {
-            RussianHen someName = new RussianHen();
-            System.out.println(someName.getDescription());
+            Hen russianHen = new RussianHen();
+            Hen belorusianHen = new BelorusianHen();
+            Hen ukrainianHen = new UkrainianHen();
+            Hen moldovanHen = new MoldovanHen();
+            System.out.println(russianHen.getDescription());
+            System.out.println(belorusianHen.getDescription());
+            System.out.println(ukrainianHen.getDescription());
+            System.out.println(moldovanHen.getDescription());
+            totalEggs += russianHen.getTotalEggsPerYear() + belorusianHen.getTotalEggsPerYear() + ukrainianHen.getTotalEggsPerYear() + moldovanHen.getTotalEggsPerYear();
         }
-        for (int i = 0; i < 25; i++) {
-            BelorusianHen someName = new BelorusianHen();
-            System.out.println(someName.getDescription());
-        }
-        for (int i = 0; i < 25; i++) {
-            UkrainianHen someName = new UkrainianHen();
-            System.out.println(someName.getDescription());
-        }
-        for (int i = 0; i < 25; i++) {
-            MoldovanHen someName = new MoldovanHen();
-            System.out.println(someName.getDescription());
-        }
-        System.out.println(RussianHen.countOfRussianEggs);
-        System.out.println(BelorusianHen.countOfBelorusianEggs);
-        System.out.println(UkrainianHen.countOfUkrainianEggs);
-        System.out.println(MoldovanHen.countOfMoldovanEggs);
-        System.out.println("Общее количество яиц, снесённых за год на фабрике: " + Hen.totalEggsPerYear);
-
+        System.out.println("Общее количество яиц, снесённых за год на фабрике: " + totalEggs);
     }
 }

@@ -2,15 +2,15 @@ package HW9;
 
 public class MoldovanHen extends Hen {
     private int numberOfMoldovanEggsPerMonth = 46;
-    static int countOfMoldovanEggs = 0;
 
     @Override
     public int getCountOfEggsPerMonth() {
         return numberOfMoldovanEggsPerMonth;
     }
 
-    public MoldovanHen() {
-        countOfMoldovanEggs += getCountOfEggsPerMonth() * 12;
+    @Override
+    public int getTotalEggsPerYear() {
+        return getCountOfEggsPerMonth() * 12;
     }
 
     @Override
