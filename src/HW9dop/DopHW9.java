@@ -2,7 +2,7 @@ package HW9dop;
 
 import java.util.Arrays;
 
-public class dopHW9 {
+public class DopHW9 {
     public static void main(String[] args) {
         int[] array = {2, 4, 6, 8};
         System.out.println("Input: " + Arrays.toString(array));
