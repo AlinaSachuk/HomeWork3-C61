@@ -11,5 +11,6 @@ public class Task3 {
         String line2 = scanner.nextLine();
         System.out.println("Введите строку 3.");
         String line3 = scanner.nextLine();
+
     }
 }
