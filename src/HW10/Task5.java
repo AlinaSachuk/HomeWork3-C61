@@ -12,9 +12,7 @@ public class Task5 {
             StringBuilder line = new StringBuilder(scanner.next());
             StringBuilder lineToReverse = new StringBuilder(line.reverse());
             line.reverse();
-            String x = String.valueOf(line);
-            String y = String.valueOf(lineToReverse);
-            if (x.equals(y)) {
+            if (line.toString().equals(lineToReverse.toString())) {
                 System.out.println(line + " - это слово-палиндром");
             }
         }
