@@ -2,20 +2,30 @@ package HW11;
 
 public class House {
     private int numberOfRooms;
+    private int numberOfBathrooms;
+    private String floorColor;
+    private String floorMaterial;
 
-    public House(int numberOfRooms) throws HouseException{
-        if (numberOfRooms < 1){
-            throw new HouseException(numberOfRooms);
+    public House(int numberOfRooms, int numberOfBathrooms, String floorColor, String floorMaterial) throws HouseException {
+        if (numberOfRooms < 1) {
+        } else if (numberOfBathrooms > 3) {
+        } else if (floorColor.equals("pink")) {
+        } else if (floorMaterial.equals("oak")) {
+            throw new HouseException(numberOfRooms, numberOfBathrooms, floorColor, floorMaterial);
         }
         this.numberOfRooms = numberOfRooms;
-        System.out.println("There are " + numberOfRooms + " rooms in this house.");
+        this.numberOfBathrooms = numberOfBathrooms;
+        this.floorColor = floorColor;
+        this.floorMaterial = floorMaterial;
     }
 
-    public int getNumberOfRooms() {
-        return numberOfRooms;
-    }
-
-    public void setNumberOfRooms(int numberOfRooms) {
-        this.numberOfRooms = numberOfRooms;
+    @Override
+    public String toString() {
+        return "House{" +
+                "numberOfRooms=" + numberOfRooms +
+                ", numberOfBathrooms=" + numberOfBathrooms +
+                ", floorColor='" + floorColor + '\'' +
+                ", floorMaterial='" + floorMaterial + '\'' +
+                '}';
     }
 }

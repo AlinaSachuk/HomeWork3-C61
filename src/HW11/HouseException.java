@@ -1,14 +1,15 @@
 package HW11;
 
-public class HouseException extends ArithmeticException{
-    int numberOfRooms;
+public class HouseException extends Exception {
+    private int numberOfRooms;
+    private int numberOfBathrooms;
+    private String floorColor;
+    private String floorMaterial;
 
-    public HouseException (int numberOfRooms) {
+    public HouseException(int numberOfRooms, int numberOfBathrooms, String floorColor, String floorMaterial) {
         this.numberOfRooms = numberOfRooms;
-    }
-
-    @Override
-    public String toString() {
-        return "You entered illegal number of rooms in a house!";
+        this.numberOfBathrooms = numberOfBathrooms;
+        this.floorColor = floorColor;
+        this.floorMaterial = floorMaterial;
     }
 }
