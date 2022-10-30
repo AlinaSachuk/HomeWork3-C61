@@ -20,7 +20,7 @@ public class Task2 {
         } else if (l1 > l2 & l1 > l3 & l3 > l2) {
             System.out.println(line2 + ", " + line3 + ", " + line1);
         } else if (l1 > l2 & l1 > l3 & l3 == l2) {
-            System.out.println(line1 + ", " + line2 + ", " + line1);
+            System.out.println(line3 + ", " + line2 + ", " + line1);
         } else if (l2 > l1 & l2 > l3 & l1 > l3) {
             System.out.println(line3 + ", " + line1 + ", " + line2);
         } else if (l2 > l1 & l2 > l3 & l3 > l1) {
