@@ -21,8 +21,7 @@ public class Task4 {
                 }
             }
             if (counter > 0) {
-                System.out.print("Слово, состоящее только из различных символов: ");
-                System.out.println(line);
+                System.out.print("Слово, состоящее только из различных символов: " + line);
                 break;
             }
         }
