@@ -23,9 +23,8 @@ public class HomeWork11 {
         }
         System.out.println("Task 11.3");
         try {
-            House house = new House(0, 6, "pink", "oak");
+            House house = new House(4, 7, "black", "wood");
         } catch (HouseException | RuntimeException e) {
-            System.out.println("Your entered incorrect parameters for House.");
         }
         System.out.println("Task 11.4");
         try {
