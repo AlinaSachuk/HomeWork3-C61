@@ -11,6 +11,6 @@ public class HouseException extends Exception {
         this.numberOfBathrooms = numberOfBathrooms;
         this.floorColor = floorColor;
         this.floorMaterial = floorMaterial;
-        System.out.println("Your entered incorrect parameters for House.");
+        System.out.println("Warning! Exception: you entered incorrect parameters for House.");
     }
 }
