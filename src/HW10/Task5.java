@@ -5,15 +5,22 @@ import java.util.Scanner;
 public class Task5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите необходимое количество слов в виде цифры.");
-        int numberOfWords = scanner.nextInt();
-        for (int n = 0; n < numberOfWords; n++) {
-            System.out.println("Введите слово, состоящее только из цифр.");
-            StringBuilder line = new StringBuilder(scanner.next());
-            StringBuilder lineToReverse = new StringBuilder(line.reverse());
-            line.reverse();
-            if (line.toString().equals(lineToReverse.toString())) {
-                System.out.println(line + " - это слово-палиндром");
+        String[] array = new String[3];
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Введите " + (i + 1) + " строку");
+            array[i] = scanner.nextLine();
+        }
+        for (String number : array) {
+            boolean palindrom = true;
+            for (int i = 0; i < number.length() / 2; i++) {
+                if (number.charAt(i) != number.charAt(number.length() - 1 - i)) {
+                    palindrom = false;
+                    break;
+                }
+            }
+            if (palindrom) {
+                System.out.print("слово-палиндром: " + number);
+                break;
             }
         }
     }

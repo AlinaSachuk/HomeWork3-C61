@@ -5,32 +5,22 @@ import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите строку 1.");
-        String line1 = scanner.nextLine();
-        System.out.println("Введите строку 2.");
-        String line2 = scanner.nextLine();
-        System.out.println("Введите строку 3.");
-        String line3 = scanner.nextLine();
-        Integer x1 = Integer.parseInt(String.valueOf(line1.length()));
-        Integer x2 = Integer.parseInt(String.valueOf(line2.length()));
-        Integer x3 = Integer.parseInt(String.valueOf(line3.length()));
-        if (x1 > x2 & x1 > x3){
-            System.out.println("Самая длинная строка - "+ line1 + ". Длина этой строки - " + x1);
-        } else if (x2 > x1 & x2 > x3){
-            System.out.println("Самая длинная строка - "+ line2 + ". Длина этой строки - " + x2);
-        } else if (x3 > x1 & x3 > x2) {
-            System.out.println("Самая длинная строка - "+ line3 + ". Длина этой строки - " + x3);
-        } else {
-            System.out.println("Вы ввели строки с одинаковой длинной. Перезапустите программу и введите новые строки.");
+        String[] arrayOfWords = new String[3];
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Введите " + (i + 1) + " строку");
+            arrayOfWords[i] = scanner.nextLine();
         }
-        if (x1 < x2 & x1 < x3){
-            System.out.println("Самая короткая строка - "+ line1 + ". Длина этой строки - " + x1);
-        } else if (x2 < x1 & x2 < x3){
-            System.out.println("Самая короткая строка - "+ line2 + ". Длина этой строки - " + x2);
-        } else if (x3 < x1 & x3 < x2) {
-            System.out.println("Самая короткая строка - "+ line3 + ". Длина этой строки - " + x3);
-        } else {
-            System.out.println("Вы ввели строки с одинаковой длинной. Перезапустите программу и введите новые строки.");
+        String maxLength = arrayOfWords[0];
+        String minLength = arrayOfWords[0];
+        for (int i = 0; i < arrayOfWords.length; i++) {
+            if (arrayOfWords[i].length() > maxLength.length()) {
+                maxLength = arrayOfWords[i];
+            }
+            if (arrayOfWords[i].length() < minLength.length()) {
+                minLength = arrayOfWords[i];
+            }
         }
+        System.out.println("самая длинная строка " + maxLength + ". Ее длина " + maxLength.length());
+        System.out.println("самая короткая строка " + minLength + ". Ее длина " + minLength.length());
     }
 }
