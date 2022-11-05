@@ -17,7 +17,7 @@ public class Animal13 {
 
     public String deleteAnimal() {
         animals.removeFirst();
-        return "Last element of Animal collection deleted";
+        return "First element of Animal collection deleted";
     }
 
     @Override
