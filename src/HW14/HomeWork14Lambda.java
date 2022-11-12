@@ -9,6 +9,9 @@ import java.util.function.Supplier;
 public class HomeWork14Lambda {
     public static void main(String[] args) {
         System.out.println("Task 1:");
+        Predicate<String> someWord = x -> x.startsWith("J") & x.startsWith("N") | x.endsWith("a");
+        System.out.println(someWord.test("Nana"));
+        System.out.println(someWord.test("Cow"));
         System.out.println("Task 2:");
         Box box = new Box();
         Consumer<Integer> boxInfo = x -> System.out.println("Отгрузили ящик с весом " + box.getBoxWeight() + " кг.");
