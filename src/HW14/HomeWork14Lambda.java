@@ -35,7 +35,7 @@ public class HomeWork14Lambda {
         System.out.println("Task 4:");
         Supplier<Integer> supplier = () -> {
             Random random = new Random();
-            int randomNumber = random.nextInt(0,10);
+            int randomNumber = random.nextInt(0, 10);
             return randomNumber;
         };
         System.out.println(supplier.get());
