@@ -19,7 +19,7 @@ public class HW15 {
         idName.put(13, "Serena");
         ArrayList names = (ArrayList) idName.entrySet().stream().
                 filter(n -> (n.getKey() == 1) || (n.getKey() == 2) || (n.getKey() == 5) || (n.getKey() == 8) || (n.getKey() == 9) || (n.getKey() == 13)).
-                map(Map.Entry::getValue).filter(n -> n.length() % 2 != 0).map(n -> new StringBuffer(n).reverse()).
+                map(Map.Entry::getValue).filter(n -> n.length() % 2 != 0).map(n -> new StringBuffer(n).reverse()).map(StringBuffer::toString).
                 collect(Collectors.toList());
         System.out.println(names);
     }
