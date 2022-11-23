@@ -34,7 +34,7 @@ public class HW17 {
         reader.close();
         String info = String.valueOf(builder);
         Pattern patternDocNumber = Pattern.compile("([0-9]{4})(-?[0-9]{4})(-?[0-9]{2})");
-        Pattern patternMobNumber = Pattern.compile("([+(][0-9]{2}[)])([0-9]{7})");
+        Pattern patternMobNumber = Pattern.compile("[+][(][0-9]{2}[)][0-9]{7}");
         Matcher matcherDocNumber = patternDocNumber.matcher(info);
         Matcher matcherMobNumber = patternMobNumber.matcher(info);
         HashMap<String,String> allInfo = new HashMap<>();
@@ -42,7 +42,6 @@ public class HW17 {
         matcherMobNumber.find();
         allInfo.put("Document number", matcherDocNumber.group());
         allInfo.put("Phone number", matcherMobNumber.group());
-        System.out.println(allInfo.get("Document number"));
-
+        System.out.println(allInfo);
     }
 }
