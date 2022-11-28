@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,20 +10,21 @@ public class HW17 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter ip-address in IPv4 version (format X.X.X.X): ");
         String ipLine = scanner.nextLine();
-        Pattern pattern = Pattern.compile("[0-9]{4,}");
-        Pattern pattern2 = Pattern.compile("[A-z]");
-        Matcher matcher = pattern.matcher(ipLine);
-        Matcher matcher2 = pattern2.matcher(ipLine);
+        Pattern pattern = Pattern.compile("\\d{1,3}");
         String[] lines = ipLine.split("[.]");
-        if (lines.length != 4) {
-            System.out.println("NOT VALID ip-address!!! Restart the program and enter ip-address again.");
-        } else if (matcher.find()) {
-            System.out.println("NOT VALID ip-address!!!");
-        } else if (matcher2.find()) {
-            System.out.println("NOT VALID ip-address!!!");
-        } else {
-            System.out.println("Entered ip-address is valid");
+        boolean flag = true;
+        if (lines.length != 4){
+            flag = false;
         }
+        for (int i = 0; i < lines.length; i++) {
+            Matcher matcher1 = pattern.matcher(lines[i]);
+
+            if (matcher1.find() && (Integer.parseInt(matcher1.group()) > 255)){
+                flag = false;
+            }
+        }
+        System.out.println(flag?"Entered ip-address is valid":"NOT VALID ip-address!!! Restart the program and enter ip-address again");
+
         FileReader reader = new FileReader("/Users/alina/Documents//HW17.txt");
         StringBuilder builder = new StringBuilder();
         int c = -1;
